@@ -43,6 +43,10 @@
                         <!-- Authentication Links -->
 
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('ricette.crearicette') }}">{{ __('Crea ricette') }} </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('creaerrore') }}">{{ __('Aggiungi errore') }} </a>
                         </li>
 
@@ -81,9 +85,9 @@
                 </div>
             </div>
         </nav>
-        <main class="py-4">
+        <main class="py-4 px-4">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-12">
                     @yield('content')
                 </div>
             </div>

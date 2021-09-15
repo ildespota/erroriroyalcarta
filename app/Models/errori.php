@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\errori_images;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,4 +19,9 @@ class errori extends Model
         'risolto',
         'immagine'
     ];
+
+    public function erroris()
+    {
+        return $this->hasMany(errori_images::class);
+    }
 }

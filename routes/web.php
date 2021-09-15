@@ -3,8 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerErrori;
-
-
+use App\Http\Controllers\RicetteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +16,9 @@ use App\Http\Controllers\ControllerErrori;
 |
 */
 
-Route::get('/', [ControllerErrori::class, 'index'])->name('welcome');
+Route::get('/', [RicetteController::class, 'indexricette'])->name('welcome');
 Route::get('creaerrore', [ControllerErrori::class, 'creaerrore'])->name('creaerrore');
 Route::post('aggiungierrore', [ControllerErrori::class, 'aggiungierrore'])->name('aggiungierrore');
+
+Route::get('/crearicette', [RicetteController::class, 'crearicette'])->name('ricette.crearicette');
+Route::post('/storericette', [RicetteController::class, 'storericette'])->name('ricette.storericette');

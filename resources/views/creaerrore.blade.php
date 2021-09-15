@@ -5,17 +5,17 @@
     @csrf
     <div class="form-group">
         <label for="codiceerrore">Codice errore</label>
-        <input type="text" class="form-control" id="codiceerrore" placeholder="codice errore sulla macchina">
+        <input type="text" class="form-control" id="codiceerrore" name="codiceerrore" placeholder="codice errore sulla macchina">
 
     </div>
     <div class="form-group">
-        <label for="causa errore ">Causa Errore</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="causaerrore ">Causa Errore</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="causaerrore" rows="3"></textarea>
     </div>
 
     <div class="form-group">
         <label for="possibilirisoluzioni">Possibili risoluzioni</label>
-        <input type="text" class="form-control" id="possibili risoluzioni" placeholder="possibili risoluzioni">
+        <input type="text" class="form-control" id="possibili risoluzioni" name="possibilirisoluzioni" placeholder="possibili risoluzioni">
     </div>
 
     <div class="form-check form-check-inline">

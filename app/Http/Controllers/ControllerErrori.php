@@ -18,8 +18,11 @@ class ControllerErrori extends Controller
         return view('creaerrore');
     }
 
-    public function aggiungierrore()
+    public function aggiungierrore(Request $req)
     {
+        $tutto = $req->input();
+        $p = errori::create($tutto);
         return view('aggiungierrore');
+        dd($p);
     }
 }
