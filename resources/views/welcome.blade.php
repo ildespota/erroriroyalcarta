@@ -5,87 +5,168 @@
 
 @foreach ($ricette as $ricetta)
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{$ricetta->codiceArticolo}}">
+
+<button class="btn btn-primary btn-lg btn-block my-3" type="button" data-toggle="collapse" data-target="#{{$ricetta->codiceArticolo}}">
     {{$ricetta->codiceArticolo}}
 </button>
 
-<div class="collapse" id="{{$ricetta->codiceArticolo}}">
-    <div class="row">
-        <div class="col-md-4 ">
-            <h2>Articolo: {{$ricetta->codiceArticolo}}</h2>
-            <h4>Simatec Panel Touch:</h4>
-            <p><b>lunghezza pacco:</b> {{$ricetta->lunghezzaPacco}}</p>
-            <p><b>spaziatura:</b> {{$ricetta->spaziatura}}</p>
-            <p><b>velocità nastri:</b> {{$ricetta->velocitàNastri}} </p>
-            <p><b>soffietto on :</b> {{$ricetta->soffiettoOn}}</p>
-            <p><b>evacuazione tappeto uscita:</b>{{$ricetta->evacuazioneTappetoUscita}}</p>
-            <p><b>disabilitazione consenso valle:</b>{{$ricetta->disabilitazioneConsensoValle}}</p>
-            <p><b>monopiegatore:</b> {{$ricetta->monopiegatore}}</p>
-            <p><b>pareggiatore:</b>{{$ricetta->pareggiatore}}</p>
-            <p><b>disabilitazione consenso uscita:</b>{{$ricetta->disabilitazioneConsensoUscita}}</p>
-            <p><b>ritardo partenza:</b>{{$ricetta->partenza}}</p>
-            <p><b>durata corsa avanti:</b> {{$ricetta->durataCorsaAvanti}}</p>
-            <p><b>Disimpegno Fotocelulla:</b>{{$ricetta->disimpegnoFotocellula}} </p>
-            <p><b>Tempo saldatura:</b>{{$ricetta->tempoSaldatura}}</p>
-            <p><b>Anticipo Saldatura:</b>{{$ricetta->anticipoSaldatura}}</p>
-            <p><b>Centratura:</b>{{$ricetta->centratura}}</p>
-            <p><b>Anticipo Stop Nastro Uscita:</b>{{$ricetta->anticipoStopNastroUscita}}</p>
-            <p><b>Altezza barra:</b>{{$ricetta->altezzaBarra}}</p>
-            <p><b>Max velocità ritorno barra:</b>{{$ricetta->maxVelocitàRitornoBarra}}</p>
-            <p><b>Tempo apertura barra:</b>{{$ricetta->tempoAperturaBarra}}</p>
-            <p><b>Evacuazione Tappeto Uscita:</b>{{$ricetta->evacuazioneTappetoUscita}}</p>
-            <p><b>Saldatore Laterale:</b>{{$ricetta->saldatoreLaterale}}</p>
-            <p><b>Fotocellule:</b>{{$ricetta->fotocellule}}</p>
-            <p><b>Tappeti Avvicinabili:</b>{{$ricetta->tappetiAvvicinabili}}</p>
-        </div>
-        <div class=" col-md-4">
-            <h4>Simatec HMI</h4>
-            <p><b>fotocellula canale 1:</b></p>
-            <p><b>fotocellula canale 2:</b></p>
-            <p><b>fotocellula canale 3:</b></p>
-            <p><b>fotocellula conteggio:</b></p>
-            <p><b>velocità ingresso:</b></p>
-            <p><b>velocità cingholi:</b></p>
-            <p><b>velocità centrale:</b></p>
-            <p><b>velocità uscita:</b></p>
-            <p><b>canali attivi:</b></p>
-            <p><b>cambio canale:</b></p>
-            <p><b>capienza canale:</b></p>
-            <p><b>uscita canale:</b></p>
-            <p><b>by-pass consenso a monte:</b></p>
-            <p><b>by-pass consenso da valle:</b></p>
-            <p><b>Modalità SOLO NASTRI diverter:</b></p>
-            <p><b>Controllo ribaltamento rotoli:</b></p>
-            <p><b>Carico nastro centrale a passo:</b></p>
-            <p><b>Abilita uscita da blocchi:</b></p>
-            <p><b>Mettietichetta ferma nastro:</b></p>
-            <p><b>Tempo ritardo 1 colla:</b></p>
-            <p><b>Tempo ritardo 2 colla:</b></p>
-            <p><b>Tempo durata colla:</b></p>
-            <p><b>Ritardo tampone:</b></p>
-            <p><b>Ritardo partenza tampone:</b></p>
-            <p><b>Quota posizione Tampone:</b></p>
-        </div>
-        <div class="col-md-4">
-            <p><b>Quota anticipo stop vuota:</b></p>
-            <p><b>Tempo Attesa Ritorno:</b></p>
-            <p><b>Pareggiatore:</b></p>
-            <p><b>Ritardo partenza:</b></p>
-            <p><b>Durata allineamento:</b></p>
-            <p><b>Transito uscita nastro usc:</b></p>
-            <p><b>Fotocellula conteggio:</b></p>
-            <p><b>Presenza su blocco uno:</b></p>
-            <p><b>Tempo durata colla:</b></p>
-            <p><b>Ritardo Apertura Blocchi:</b></p>
-            <p><b>Transito Uscita AP blocco 2:</b></p>
-            <p><b>Transito Uscita CH blocco 2:</b></p>
-            <p><b>Posizione canale 1:</b></p>
-            <p><b>Posizione canale 2:</b></p>
-            <p><b>Posizione canale 3:</b></p>
-            <p><b>Posizione canale 4:</b></p>
-        </div>
+
+<div class="row collapse" id="{{$ricetta->codiceArticolo}}">
+    <h2 class="col-12 text-center text-danger">Articolo: {{$ricetta->codiceArticolo}}</h2>
+    <div class="col-md-4">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item  list-group-item-info">
+                <h4>Simatec Panel Touch:</h4>
+            </li>
+            <li class="list-group-item"><b>Lunghezza pacco:</b> {{$ricetta->lunghezzaPacco}} mm</p>
+            </li>
+            <li class="list-group-item">
+                <b>Spaziatura:</b> {{$ricetta->spaziatura}} mm
+            </li>
+            <li class="list-group-item">
+                <b>Velocità nastri:</b> {{$ricetta->velocitàNastri}} m/min
+            </li>
+            <li class="list-group-item">
+                <b>Soffietto on :</b> <span class="checkbool">{{$ricetta->soffiettoOn}}</span>
+            </li>
+            <li class="list-group-item">
+                <b>Evacuazione tappeto uscita:</b>{{$ricetta->evacuazioneTappetoUscita}} s
+            </li>
+            <li class="list-group-item">
+                <b>Disabilitazione consenso valle:</b> <span class="checkbool">{{$ricetta->disabilitazioneConsensoValle}}</span>
+            </li>
+            <li class="list-group-item">
+                <b>Monopiegatore:</b> <span class="checkbool">{{$ricetta->monopiegatore}}</span>
+            </li>
+            <li class="list-group-item">
+                <b>Pareggiatore:</b> <span class="checkbool">{{$ricetta->pareggiatore}}</span>
+            </li>
+            <li class="list-group-item">
+                <b>Disabilitazione consenso uscita:</b> <span class="checkbool">{{$ricetta->disabilitazioneConsensoUscita}}</span>
+            </li>
+            <li class="list-group-item">
+                <b>Ritardo partenza:</b>{{$ricetta->ritardoPartenza}} s
+            </li>
+            <li class="list-group-item">
+                <b>Durata corsa avanti:</b> {{$ricetta->durataCorsaAvanti}} s
+            </li>
+            <li class="list-group-item">
+                <b>Disimpegno Fotocelulla:</b> {{$ricetta->disimpegnoFotocellula}} s
+            </li>
+            <li class="list-group-item">
+                <b>Tempo saldatura:</b> {{$ricetta->tempoSaldatura}} L/100
+            </li>
+            <li class="list-group-item">
+                <b>Anticipo Saldatura:</b>+{{$ricetta->anticipoSaldatura}}%
+            </li>
+            <li class="list-group-item">
+                <b>Centratura:</b> {{$ricetta->centratura}} mm
+            </li>
+            <li class="list-group-item">
+                <b>Anticipo Stop Nastro Uscita:</b> {{$ricetta->anticipoStopNastroUscita}} mm
+            </li>
+            <li class="list-group-item">
+                <b>Altezza barra:</b> {{$ricetta->altezzaBarra}}
+            </li>
+            <li class="list-group-item">
+                <b>Max velocità ritorno barra:</b> {{$ricetta->maxVelocitàRitornoBarra}}%
+            </li>
+            <li class="list-group-item">
+                <b>Tempo apertura barra:</b> {{$ricetta->tempoAperturaBarra}} s
+            </li>
+            <li class="list-group-item">
+                <b>Evacuazione Tappeto Uscita:</b> {{$ricetta->evacuazioneTappetoUscita}} s
+            </li>
+            <li class="list-group-item">
+                <b>Saldatore Laterale:</b> {{$ricetta->saldatoreLaterale}}
+            </li>
+            <li class="list-group-item">
+                <b>Fotocellule:</b> {{$ricetta->fotocellule}}
+            </li>
+            <li class="list-group-item">
+                <b>Tappeti Avvicinabili:</b> <span class="checkbool">{{$ricetta->tappetiAvvicinabili}}</span>
+            </li>
+        </ul>
+
+
+    </div>
+    <div class="col-md-4">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item  list-group-item-info">
+                <h4>Simatec HMI</h4>
+            </li>
+            <li class="list-group-item"> <b>Fotocellula canale 1 Alto:</b> {{$ricetta->fotocellulaCanaleUnoAlto}}</li>
+            <li class="list-group-item"> <b>Fotocellula canale 1 Basso:</b> {{$ricetta->fotocellulaCanaleUnoBasso}}</li>
+            <li class="list-group-item"> <b>Fotocellula canale 2 Alto:</b> {{$ricetta->fotocellulaCanaleDueAlto}}</li>
+            <li class="list-group-item"> <b>Fotocellula canale 2 Basso:</b> {{$ricetta->fotocellulaCanaleDueBasso}}</li>
+            <li class="list-group-item"> <b>Fotocellula canale 3 Alto:</b> {{$ricetta->fotocellulaCanaleTreAlto}}</li>
+            <li class="list-group-item"> <b>Fotocellula canale 3 Basso:</b>{{$ricetta->fotocellulaCanaleTreBasso}}</li>
+            <li class="list-group-item"> <b>Fotocellula conteggio Alto:</b> {{$ricetta->fotocellulaConteggioAlto}}</li>
+            <li class="list-group-item"> <b>Fotocellula conteggio Basso:</b> {{$ricetta->fotocellulaConteggioBasso}}</li>
+            <li class="list-group-item"> <b>Velocità ingresso Alto :</b> {{$ricetta->velocitàIngressoAlto}} mt/min</li>
+            <li class="list-group-item"> <b>Velocità ingresso Basso :</b> {{$ricetta->velocitàIngressoBasso}} mt/min</li>
+            <li class="list-group-item"> <b>Velocità cingholi Alto:</b> {{$ricetta->velocitàCingholiAlto}}</li>
+            <li class="list-group-item"> <b>Velocità cingholi Basso:</b> {{$ricetta->velocitàCingholiBasso}}</li>
+            <li class="list-group-item"> <b>Velocità centrale Alto:</b> {{$ricetta->velocitàCentraleAlto}} </li>
+            <li class="list-group-item"> <b>Velocità centrale Basso:</b> {{$ricetta->velocitàCentraleBasso}}</li>
+            <li class="list-group-item"> <b>Velocità uscita Alto:</b> {{$ricetta->velocitàUscitaAlto}}</li>
+            <li class="list-group-item"> <b>Velocità uscita Basso:</b> {{$ricetta->velocitàUscitaAlto}}</li>
+            <li class="list-group-item"> <b>Canali attivi:</b> {{$ricetta->canaliAttivi}}</li>
+            <li class="list-group-item"> <b>Cambio canale:</b> {{$ricetta->cambioCanale}}</li>
+            <li class="list-group-item"> <b>Capienza canale:</b> {{$ricetta->capienzaCanale}}</li>
+            <li class="list-group-item"> <b>Uscita canale:</b> {{$ricetta->uscitaCanale}}</li>
+            <li class="list-group-item"> <b>By-pass consenso a monte:</b> <span class="checkbool">{{$ricetta->bypassMonte}}<span></li>
+            <li class="list-group-item"> <b>By-pass consenso da valle:</b> <span class="checkbool">{{$ricetta->bypassValle}}</span></li>
+            <li class="list-group-item"> <b>Modalità SOLO NASTRI diverter:</b> <span class="checkbool">{{$ricetta->modalitàSoloNastriDiverter}}</span></li>
+
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <b>Carico nastro centrale a passo:</b> <span class="checkbool">{{$ricetta->caricoNastroCentralePasso}}</span></li>
+            <li class="list-group-item"><b>Abilita uscita da blocchi:</b> <span class="checkbool">{{$ricetta->abilitàUscitaBlocchi}}</span> </li>
+            <li class="list-group-item"><b>Mettietichetta ferma nastro:</b> <span class="checkbool">{{$ricetta->mettietichettaFermaNastro}}</span></li>
+            <li class="list-group-item"><b>Tempo ritardo 1 colla:</b> {{$ricetta->tempoRitardoUnoColla}} s</li>
+            <li class="list-group-item"><b>Tempo ritardo 2 colla:</b> {{$ricetta->tempoRitardoDueColla}} s</li>
+            <li class="list-group-item"><b>Tempo durata colla:</b> {{$ricetta->tempoDurataColla}} s</li>
+            <li class="list-group-item"><b>Quota posizione encoder:</b> {{$ricetta->quotaPosizioneEncoder}} mm</li>
+            <li class="list-group-item"><b>Ritardo partenza tampone:</b> {{$ricetta->ritardoPartenzaTampone}} s</li>
+            <li class="list-group-item"><b>Quota posizione Tampone:</b> {{$ricetta->quotaPosizioneTampone}} mm</li>
+            <li class="list-group-item"><b>Quota anticipo stop vuota:</b> {{$ricetta->quotaAnticipoStopVuota}} mm</li>
+            <li class="list-group-item"><b>Tempo Attesa Ritorno:</b> {{$ricetta->tempoAttesaRitorno}} s</li>
+            <li class="list-group-item"><b>Pareggiatore:</b> <span class="checkbool">{{$ricetta->pareggiatoreHMI}}</span></li>
+            <li class="list-group-item"><b>Ritardo partenza:</b> {{$ricetta->ritardoPartenza}} s</li>
+            <li class="list-group-item"><b>Durata allineamento:</b> {{$ricetta->durataAllineamento}} s</li>
+            <li class="list-group-item"><b>Transito uscita nastro usc:</b> {{$ricetta->transitoUscitaNastroUsc}} s</li>
+            <li class="list-group-item"><b>Presenza su blocco uno:</b> {{$ricetta->presenzaSuBloccoUno}} s</li>
+            <li class="list-group-item"><b>Ritardo Apertura Blocchi:</b> {{$ricetta->ritardoAperturaBlocchi}} s</li>
+            <li class="list-group-item"><b>Transito Uscita AP blocco 2:</b> {{$ricetta->transitoUscitaApBloccoUno}} s</li>
+            <li class="list-group-item"><b>Transito Uscita CH blocco 2:</b> {{$ricetta->transitoUscitaChBloccoDue}} s</li>
+            <li class="list-group-item"><b>Posizione canale 1:</b> {{$ricetta->posizioneCanaleUno}} mm</li>
+            <li class="list-group-item"><b>Posizione canale 2:</b> {{$ricetta->posizioneCanaleDue}} mm</li>
+            <li class="list-group-item"><b>Posizione canale 3:</b> {{$ricetta->posizioneCanaleTre}} mm</li>
+            <li class="list-group-item"><b>Posizione canale 4:</b> {{$ricetta->posizioneCanaleQuattro}} mm</li>
+        </ul>
     </div>
 </div>
+
+
 @endforeach
+
+<script>
+    var bool = document.getElementsByClassName("checkbool");
+    max = bool.length;
+    for (let i = 0; i < max; i++) {
+        let sup = bool[i].innerHTML;
+        if (sup == "1") {
+            document.getElementsByClassName("checkbool").item(i).innerHTML = "ON";
+            document.getElementsByClassName("checkbool").item(i).classList.add('bg-success', 'text-white');
+        } else if (sup == "0") {
+            document.getElementsByClassName("checkbool").item(i).innerHTML = "OFF";
+            document.getElementsByClassName("checkbool").item(i).classList.add('bg-danger', 'text-white');
+
+        }
+    }
+</script>
 
 @endsection
