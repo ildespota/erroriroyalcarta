@@ -39,7 +39,7 @@ class CreateOrdinisTable extends Migration
             $table->string('nostroCodiceArticolo')->nullable();
             $table->boolean('incollato')->nullable();
             $table->boolean('godronato')->nullable();
-            $table->decimal('diametroRotolo', 2, 1)->nullable();
+            $table->decimal('diametroRotolo', 3, 1)->nullable();
             $table->float('pesoRotoloNetto')->nullable();
             $table->decimal('pesoRotoloAnima', 4, 3)->nullable();
             $table->smallInteger('numeroRotoliCollo')->nullable();
@@ -53,7 +53,7 @@ class CreateOrdinisTable extends Migration
             $table->boolean('etichettaFardellatore')->nullable();
             $table->string('tipoEtichetta')->nullable();
             $table->string('codiceEtichetta')->nullable();
-            $table->integer('codiceABarre')->nullable();
+            $table->char('codiceABarre',13)->nullable();
             //pancale
             $table->string('tipoPancale')->nullable();
             $table->string('resaPancale')->nullable();

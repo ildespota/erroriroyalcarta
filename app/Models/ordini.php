@@ -30,7 +30,7 @@ class ordini extends Model
         'numeroStrappi',
         'tipoAnima',
         'pesoAnimaKg',
-        'Goffrato',
+        'goffrato',
         'nostroCodiceArticolo',
         'incollato',
         'godronato',

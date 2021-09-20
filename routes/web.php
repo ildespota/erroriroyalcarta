@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerErrori;
 use App\Http\Controllers\RicetteController;
+use App\Http\Controllers\OrdiniController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::post('aggiungierrore', [ControllerErrori::class, 'aggiungierrore'])->name
 
 Route::get('/crearicette', [RicetteController::class, 'crearicette'])->name('ricette.crearicette');
 Route::post('/storericette', [RicetteController::class, 'storericette'])->name('ricette.storericette');
+Route::get('/indiceordini', [OrdiniController::class, 'indexordini'])->name('ordini.indexordini');
+Route::get('/cercaordini', [OrdiniController::class, 'cercaordini'])->name('ordini.cercaordini');
