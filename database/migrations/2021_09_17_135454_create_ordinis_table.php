@@ -49,11 +49,11 @@ class CreateOrdinisTable extends Migration
             $table->boolean('filmConfezionatrice')->nullable();
             $table->boolean('etichettaConfezionatrice')->nullable();
             $table->boolean('maniglia')->nullable();
-            $table->string('filmFardellatore')->nullable();
+            $table->string('filmFardellatore', 40)->nullable();
             $table->boolean('etichettaFardellatore')->nullable();
             $table->string('tipoEtichetta')->nullable();
             $table->string('codiceEtichetta')->nullable();
-            $table->char('codiceABarre',13)->nullable();
+            $table->char('codiceABarre', 13)->nullable();
             //pancale
             $table->string('tipoPancale')->nullable();
             $table->string('resaPancale')->nullable();
