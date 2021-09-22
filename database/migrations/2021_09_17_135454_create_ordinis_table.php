@@ -35,10 +35,10 @@ class CreateOrdinisTable extends Migration
             $table->smallInteger('numeroStrappi')->nullable();
             $table->string('tipoAnima')->nullable();
             $table->decimal('pesoAnimaKg', 4, 3)->nullable();
-            $table->boolean('Goffrato')->nullable();
+            $table->varchar('Goffrato', 40)->nullable();
             $table->string('nostroCodiceArticolo')->nullable();
-            $table->boolean('incollato')->nullable();
-            $table->boolean('godronato')->nullable();
+            $table->varchar('incollato', 40)->nullable();
+            $table->varchar('godronato', 40)->nullable();
             $table->decimal('diametroRotolo', 3, 1)->nullable();
             $table->float('pesoRotoloNetto')->nullable();
             $table->decimal('pesoRotoloAnima', 4, 3)->nullable();
@@ -46,11 +46,11 @@ class CreateOrdinisTable extends Migration
             $table->decimal('pesoFilmImballo', 3, 2)->nullable();
             $table->float('totalePesoColloKg')->nullable();
             //imballo
-            $table->boolean('filmConfezionatrice')->nullable();
-            $table->boolean('etichettaConfezionatrice')->nullable();
-            $table->boolean('maniglia')->nullable();
+            $table->string('filmConfezionatrice', 40)->nullable();
+            $table->string('etichettaConfezionatrice', 40)->nullable();
+            $table->string('maniglia', 40)->nullable();
             $table->string('filmFardellatore', 40)->nullable();
-            $table->boolean('etichettaFardellatore')->nullable();
+            $table->string('etichettaFardellatore', 40)->nullable();
             $table->string('tipoEtichetta')->nullable();
             $table->string('codiceEtichetta')->nullable();
             $table->char('codiceABarre', 13)->nullable();
@@ -60,12 +60,16 @@ class CreateOrdinisTable extends Migration
             $table->smallInteger('numeroColliPerStrato')->nullable();
             $table->smallInteger('numeroStratiPerPancale')->nullable();
             $table->smallInteger('TotaleColliPancale')->nullable();
-            $table->boolean('mettiTop')->nullable();
+            $table->varchar('mettiTop', 40)->nullable();
             //produzioni e varie
             $table->decimal('pesoAnima', 4, 3)->nullable();
             $table->float('pesoSteccataKg')->nullable();
             $table->string('note')->nullable();
             $table->string('numeroPancaliDaProdurre')->nullable();
+            //PER DECORO da inserire nel model e nella view 
+            $table->decimal('pesoPoliefinaPiùManiglia', 4, 3)->nullable();
+            $table->string('tipoDiDecoro', 40)->nullable();
+
 
 
             $table->timestamps();
