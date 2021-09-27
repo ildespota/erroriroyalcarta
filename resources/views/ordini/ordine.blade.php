@@ -2,43 +2,25 @@
 
 
 @section('content')
-<form action="{{ route('ordini.cercaordini') }}" method="GET">
-    <label for="search">Cerca per numero ordine o codice articolo</label>
-    <input type="text" name="search" />
 
-    <button type="submit">Search</button>
-</form>
-<form action="{{ route('ordini.cercaAltezza') }}" method="GET">
-    <label for="rangeAltezza" class="form-label">Altezza minima rotolo: </label>
-    <input type="number" name="rangeAltezza" id="rangeAltezza">
-
-    <button type="submit">Search</button>
-</form>
-
-
-@foreach ($ordini as $ordine)
-<a href="/ordine/{{$ordine->id}}"><button class="btn btn-primary btn-lg btn-block my-3" type="button" data-toggle="collapse" data-target="#{{$ordine->nostroCodiceArticolo}}">
-        {{$ordine->nostroCodiceArticolo}}
-    </button>
-
-    <!-- <div class="row collapse" id="{{$ordine->nostroCodiceArticolo}}">
+<div class="row ">
     <ul class="list-group list-group-flush col-12">
         <li class="list-group-item">
             <h3>{{$ordine->nostroCodiceArticolo}}</h3>
         </li>
-        <li class="list-group-item"><b>Data:</b> {{$ordine->data}}</li>
+        <li class="list-group-item"><b>Data:</b>{{$ordine->data}}</li>
         <li class="list-group-item"><b>Cliente:</b> {{$ordine->cliente}}</li>
-        <li class="list-group-item"><b>Cliente:</b> {{$ordine->articolo}}</li>
+        <li class="list-group-item"><b>Articolo:</b> {{$ordine->articolo}}</li>
         <li class="list-group-item"><b>Famiglia:</b> {{$ordine->famiglia}}</li>
         <li class="list-group-item"><b>Materia Prima:</b> {{$ordine->materiaPrima}}</li>
         <li class="list-group-item"><b>Tipo Carta:</b> {{$ordine->tipoCarta}}</li>
         <li class="list-group-item"><b>Qualità carta:</b> {{$ordine->qualitàCarta}}</li>
         <li class="list-group-item"><b>Altezza bobina madre:</b> {{$ordine->altezzaBobinaMadre}}</li>
-        <li class="list-group-item"><b>Altezza bobina madre:</b> {{$ordine->grammatura}}</li>
-        <li class="list-group-item"><b>Altezza bobina madre:</b> {{$ordine->numeroVeli}}</li>
+        <li class="list-group-item"><b>Grammatura:</b> {{$ordine->grammatura}}</li>
+        <li class="list-group-item"><b>Numero Veli:</b> {{$ordine->numeroVeli}}</li>
         <li class="list-group-item"><b>Allungamento:</b> {{$ordine->allungamento}}</li>
         <li class="list-group-item"><b>Peso bobina madre :</b> {{$ordine->pesoBobinaMadre}}</li>
-        <li class="list-group-item"><b>Peso bobina madre :</b> {{$ordine->articolo}}</li>
+        <li class="list-group-item"><b>Articolo :</b> {{$ordine->articolo}}</li>
         <li class="list-group-item"><b>Nr. rotoli per log:</b> {{$ordine->numeroRotoliPerLog}}</li>
         <li class="list-group-item"><b>Altezza rotolo:</b> {{$ordine->altezzaRotolo}}</li>
         <li class="list-group-item"><b>Nr Metri Rotolo:</b> {{$ordine->numeroMetriRotolo}}</li>
@@ -78,7 +60,6 @@
 
         </li>
     </ul>
-</div> -->
+</div>
 
-    @endforeach
-    @endsection
+@endsection

@@ -25,3 +25,5 @@ Route::get('/crearicette', [RicetteController::class, 'crearicette'])->name('ric
 Route::post('/storericette', [RicetteController::class, 'storericette'])->name('ricette.storericette');
 Route::get('/indiceordini', [OrdiniController::class, 'indexordini'])->name('ordini.indexordini');
 Route::get('/cercaordini', [OrdiniController::class, 'cercaordini'])->name('ordini.cercaordini');
+Route::get('/cercaAltezza', [OrdiniController::class, 'cercaAltezza'])->name('ordini.cercaAltezza');
+Route::get('/ordine/{id}', [OrdiniController::class, 'show'])->name('ordini.ordine');
