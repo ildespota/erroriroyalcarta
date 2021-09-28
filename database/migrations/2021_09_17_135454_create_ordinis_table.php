@@ -23,7 +23,7 @@ class CreateOrdinisTable extends Migration
             $table->string('tipoCarta')->nullable();
             $table->string('qualitàCarta')->nullable();
             $table->decimal('altezzaBobinaMadre', 4, 3)->nullable();
-            $table->smallInteger('grammatura')->nullable();
+            $table->decimal('grammatura', 2, 1)->nullable();
             $table->tinyInteger('numeroVeli')->nullable();
             $table->string('allungamento')->nullable();
             $table->string('pesoBobinaMadre')->nullable();

@@ -3,6 +3,7 @@
 
 @section('content')
 <h2> cerca per ordine</h2>
+<h3>prodotti con numero ordine/cliente/codice prodotto che contengono "{{$search}}" </h3>
 @if($cercaordini->isNotEmpty())
 @foreach ($cercaordini as $cercaordine)
 <div class="row">

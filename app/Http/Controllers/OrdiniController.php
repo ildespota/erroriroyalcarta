@@ -14,9 +14,9 @@ class OrdiniController extends Controller
     }
     public function cercaordini(Request $request)
     {
+
         // Get the search value from the request
         $search = $request->input('search');
-
 
         // Search in the title and body columns from the posts table
 
@@ -31,7 +31,7 @@ class OrdiniController extends Controller
 
 
         // Return the search view with the resluts compacted
-        return view('ordini.cercaordini', compact('cercaordini'));
+        return view('ordini.cercaordini', compact('cercaordini', 'search'));
     }
 
     public function cercaAltezza(Request $request)
@@ -42,7 +42,7 @@ class OrdiniController extends Controller
             ->where('altezzaRotolo', '>', $rangeAltezza)
             ->get();
 
-        return view('ordini.cercaAltezza', compact('cercaAltezza'));
+        return view('ordini.cercaAltezza', compact('cercaAltezza', 'rangeAltezza'));
     }
 
     public function show($id)
