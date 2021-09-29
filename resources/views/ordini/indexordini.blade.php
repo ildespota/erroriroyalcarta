@@ -18,7 +18,7 @@
 
 @foreach ($ordini as $ordine)
 <a href="/ordine/{{$ordine->id}}"><button class="btn btn-primary btn-lg btn-block my-3" type="button" data-toggle="collapse" data-target="#{{$ordine->nostroCodiceArticolo}}">
-        {{$ordine->nostroCodiceArticolo}}
+        {{$ordine->nostroCodiceArticolo}} | {{$ordine->materiaPrima}} | {{$ordine->data}}
     </button>
 
     <!-- <div class="row collapse" id="{{$ordine->nostroCodiceArticolo}}">

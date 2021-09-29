@@ -9,9 +9,8 @@
 <div class="row">
     <div class="col-12">
         <a href="/ordine/{{$cercaordine->id}}"><button class="btn btn-primary btn-lg btn-block my-3" type="button">
-                {{$cercaordine->nostroCodiceArticolo}}
+                {{$cercaordine->nostroCodiceArticolo}} | {{$cercaordine->materiaPrima}} | {{$cercaordine->data}}
             </button>
-
     </div>
 </div>
 @endforeach

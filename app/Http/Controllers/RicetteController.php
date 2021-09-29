@@ -21,4 +21,9 @@ class RicetteController extends Controller
     {
         return view('ricette.storericette');
     }
+    public function showParam($id)
+    {
+        $ricetta = ricette::findOrFail($id);
+        return view('ricette.ricetta', compact('ricetta'));
+    }
 }

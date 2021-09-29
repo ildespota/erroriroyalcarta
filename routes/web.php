@@ -27,3 +27,4 @@ Route::get('/indiceordini', [OrdiniController::class, 'indexordini'])->name('ord
 Route::get('/cercaordini', [OrdiniController::class, 'cercaordini'])->name('ordini.cercaordini');
 Route::get('/cercaAltezza', [OrdiniController::class, 'cercaAltezza'])->name('ordini.cercaAltezza');
 Route::get('/ordine/{id}', [OrdiniController::class, 'show'])->name('ordini.ordine');
+Route::get('/ricetta/{id}', [RicetteController::class, 'showParam'])->name('ricette.ricetta');
