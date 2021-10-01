@@ -98,6 +98,8 @@
             <h2 class="d-inline bg-warning">Numero Pancali da Produrre:</h2>
             <h2 class="d-inline">{{$ordine->numeroPancaliDaProdurre}}</h2>
 
+
+
         </li>
 
     </ul>

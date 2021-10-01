@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Parametri Pannelli</h1>
+<h1>Parametri Pannelli Al Confezionamento</h1>
 
 @foreach ($ricette as $ricetta)
 
