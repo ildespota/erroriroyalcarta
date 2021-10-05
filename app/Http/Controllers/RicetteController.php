@@ -19,87 +19,13 @@ class RicetteController extends Controller
     }
     public function storericette(Request $request)
     {
-        $storeRicette = $request->validate([
-            'codiceArticolo',
-            'lunghezzaPacco',
-            'spaziatura',
-            'velocitàNastri',
-            'soffiettoOn',
-            'disabilitazioneConsensoValle',
-            'monopiegatore',
-            'pareggiatore',
-            'disabilitazioneConsensoUscita',
-            'ritardoPartenza',
-            'durataCorsaAvanti',
-            'disimpegnoFotocellula',
-            'tempoSaldatura',
-            'anticipoSaldatura',
-            'centratura',
-            'anticipoStopNastroUscita',
-            'altezzaBarra',
-            'maxVelocitàRitornoBarra',
-            'tempoAperturaBarra',
-            'evacuazioneTappetoUscita',
-            'saldatoreLaterale',
-            'fotocellule',
-            'tappetiAvvicinabili',
+        $storeRicette = $request->all();
 
-            // Simatec HMI
 
-            'fotocellulaCanaleUnoAlto',
-            'fotocellulaCanaleUnoBasso',
-            'fotocellulaCanaleDueAlto',
-            'fotocellulaCanaleDueBasso',
-            'fotocellulaCanaleTreAlto',
-            'fotocellulaCanaleTreBasso',
-            'fotocellulaConteggioAlto',
-            'fotocellulaConteggioBasso',
-            'velocitàIngressoAlto',
-            'velocitàIngressoBasso',
-            'velocitàCingholiAlto',
-            'velocitàCingholiBasso',
-            'velocitàCentraleAlto',
-            'velocitàCentraleBasso',
-            'velocitàUscitaAlto',
-            'velocitàUscitaBasso',
-            'canaliAttivi',
-            'cambioCanale',
-            'capienzaCanale',
-            'uscitaCanale',
-            'bypassMonte',
-            'bypassValle',
-            'modalitàSoloNastriDiverter',
-            'controlloRibaltamentoRotoli',
-            'caricoNastroCentralePasso',
-            'abilitàUscitaBlocchi',
-            'mettietichettaFermaNastro',
-            'tempoRitardoUnoColla',
-            'tempoRitardoDueColla',
-            'tempoDurataColla',
-            'quotaPosizioneEncoder',
-            'ritardoPartenzaTampone',
-            'quotaPosizioneTampone',
-            'quotaAnticipoStopVuota',
-            'tempoAttesaRitorno',
-            'pareggiatoreHMI',
-            'ritardoPartenzaHMI',
-            'durataAllineamento',
-            'transitoUscitaNastroUsc',
-            'fotocellulaConteggioHMI',
-            'presenzaSuBloccoUno',
-            'tempoDurataCollaHMI',
-            'ritardoAperturaBlocchi',
-            'transitoUscitaApBloccoUno',
-            'transitoUscitaChBloccoDue',
-            'posizioneCanaleUno',
-            'posizioneCanaleDue',
-            'posizioneCanaleTre',
-            'posizioneCanaleQuattro'
-        ]);
 
-        $ricetta = Ricette::create($storeRicette);
+        Ricette::create($storeRicette);
 
-        return redirect('ricette.storericette')->with('completato', 'i parametri sono stati salvati');
+        return view('ricette.storericette');
     }
 
     public function showParam($id)
