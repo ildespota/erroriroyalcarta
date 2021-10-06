@@ -41,7 +41,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('ordini.indexordini') }}">{{ __('Indice ordini') }} </a>
                         </li>
@@ -52,6 +52,9 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('creaerrore') }}">{{ __('Aggiungi errore') }} </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('manutenzioni') }}">{{ __('Indice Manutenzioni') }} </a>
                         </li>
 
                         @guest

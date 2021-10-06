@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControllerErrori;
+use App\Http\Controllers\ManutenzioniController;
 use App\Http\Controllers\RicetteController;
 use App\Http\Controllers\OrdiniController;
 
@@ -28,3 +29,4 @@ Route::get('/cercaordini', [OrdiniController::class, 'cercaordini'])->name('ordi
 Route::get('/cercaAltezza', [OrdiniController::class, 'cercaAltezza'])->name('ordini.cercaAltezza');
 Route::get('/ordine/{id}', [OrdiniController::class, 'show'])->name('ordini.ordine');
 Route::get('/ricetta/{id}', [RicetteController::class, 'showParam'])->name('ricette.ricetta');
+Route::get('/manutenzioni', [ManutenzioniController::class, 'indexManutenzioni'])->name('manutenzioni');

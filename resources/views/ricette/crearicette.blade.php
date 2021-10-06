@@ -343,6 +343,10 @@
                 <label class="mx-2" for="posizioneCanaleQuattro"> Posizione Canale Quattro: </label>
                 <input type="number" id="posizioneCanaleQuattro" name="posizioneCanaleQuattro" placeholder="Posizione Canale Quattro">
             </div>
+            <div class="row col-12 col-md-10 my-2">
+                <label class="mx-2" for="posizioneCanaleQuattro"> Posizione Canale Quattro: </label>
+                <input type="number" id="posizioneCanaleQuattro" name="posizioneCanaleQuattro" placeholder="Posizione Canale Quattro">
+            </div>
 
             <button type="submit">crea ricetta</button>
 
