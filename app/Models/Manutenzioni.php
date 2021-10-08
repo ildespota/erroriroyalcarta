@@ -9,12 +9,11 @@ class Manutenzioni extends Model
 {
     use HasFactory;
     protected $table = 'registromanutenzioni';
-
     protected $fillable = [
-        'id-manutenzione',
+        'idManutenzione',
         'data',
         'esecutore',
         'descrizioneManutenzione',
-        'note'
+        'note',
     ];
 }

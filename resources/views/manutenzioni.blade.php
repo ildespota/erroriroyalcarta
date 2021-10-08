@@ -38,6 +38,8 @@
                 @endforeach
             </tbody>
         </table>
+
+        <a href="{{route('createmanutenzioni')}}"><button> Crea manutenzioni</button></a>
     </div>
 </div>
 

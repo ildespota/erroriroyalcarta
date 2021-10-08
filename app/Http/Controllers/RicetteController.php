@@ -20,11 +20,7 @@ class RicetteController extends Controller
     public function storericette(Request $request)
     {
         $storeRicette = $request->all();
-
-
-
         Ricette::create($storeRicette);
-
         return view('ricette.storericette');
     }
 

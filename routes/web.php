@@ -30,3 +30,5 @@ Route::get('/cercaAltezza', [OrdiniController::class, 'cercaAltezza'])->name('or
 Route::get('/ordine/{id}', [OrdiniController::class, 'show'])->name('ordini.ordine');
 Route::get('/ricetta/{id}', [RicetteController::class, 'showParam'])->name('ricette.ricetta');
 Route::get('/manutenzioni', [ManutenzioniController::class, 'indexManutenzioni'])->name('manutenzioni');
+Route::get('/createmanutenzioni', [ManutenzioniController::class, 'createManutenzioni'])->name('createmanutenzioni');
+Route::post('/storemanutenzioni', [ManutenzioniController::class, 'storeManutenzioni'])->name('storemanutenzioni');
