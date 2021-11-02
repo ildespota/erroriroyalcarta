@@ -26,10 +26,6 @@ class OrdiniController extends Controller
             ->orWhere('cliente', 'LIKE', "%{$search}%")
             ->get();
 
-
-
-
-
         // Return the search view with the resluts compacted
         return view('ordini.cercaordini', compact('cercaordini', 'search'));
     }
@@ -43,6 +39,42 @@ class OrdiniController extends Controller
             ->get();
 
         return view('ordini.cercaAltezza', compact('cercaAltezza', 'rangeAltezza'));
+    }
+
+    public function cercaAnima(Request $request)
+    {
+        $cercaAnima = $request->input('cercaAnima');
+
+        $indexAnima = ordini::query()
+            ->where('tipoAnima', 'LIKE', "%{$cercaAnima}%")
+            ->get();
+
+        return view('ordini.cercaAnima', compact('cercaAnima', 'indexAnima'));
+    }
+    public function cercaDiametro(Request $request)
+    {
+        $cercaDiametro = $request->input('cercaDiametro');
+
+        $indexDiametro = ordini::query()
+            ->where('diametroRotolo', '>', $cercaDiametro)
+            ->get();
+
+        return view('ordini.cercaDiametro', compact('cercaDiametro', 'indexDiametro'));
+    }
+    public function cercaCodice(Request $request)
+    {
+        $cercaCodice = $request->input('cercaCodice');
+        $indexCodice = ordini::query()
+            ->where('codiceABarre', 'LIKE', "%{$cercaCodice}%")
+            ->get();
+        return view('ordini.cercaCodici', compact('cercaCodice', 'indexCodice'));
+    }
+
+    public function ordiniPerCliente()
+    {
+        $numeroColli = ordini::all();
+
+        return view('ordini.ordiniPerCliente', compact('numeroColli'));
     }
 
     public function show($id)

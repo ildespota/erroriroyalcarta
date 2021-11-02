@@ -12,27 +12,27 @@
         </div>
         <div>
             <label for="data">Inserisci data</label>
-            <input type="date" name="data" id="data" required>
+            <input type="date" class="my-3 mr-3" name="data" id="data" required>
         </div>
         <div>
             <label for="esecutore">Inserisci esecutore manutenzione</label>
-            <input type="text" name="esecutore" id="esecutore" required>
+            <input type="text" class="my-3 mr-3" name="esecutore" id="esecutore" required>
         </div>
         <div>
             <label for="descrizioneManutenzione">Descrizione manutenzione</label>
         </div>
         <div>
-            <textarea t name="descrizioneManutenzione" id="descrizioneManutenzione" cols="30" rows="10" required></textarea>
+            <textarea name="descrizioneManutenzione" id="descrizioneManutenzione" cols="30" rows="10" required></textarea>
         </div>
         <div>
-            <label for="note">Note</label>
-            <input type="text" name="note" id="note">
+            <label for="note" class="my-3">Note</label>
+            <input class="my-3" type="text" name="note" id="note">
         </div>
         <button type="submit">Salva Manutenzione</button>
     </form>
 
     @if(session()->has('message'))
-    <div class="alert {{session('alert') ?? 'alert-info'}}">
+    <div class=" mx-3 alert {{session('alert') ?? 'alert-info'}}">
         {{ session('message') }}
     </div>
     @endif

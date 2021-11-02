@@ -26,7 +26,11 @@ Route::get('/crearicette', [RicetteController::class, 'crearicette'])->name('ric
 Route::post('/storericette', [RicetteController::class, 'storericette'])->name('ricette.storericette');
 Route::get('/indiceordini', [OrdiniController::class, 'indexordini'])->name('ordini.indexordini');
 Route::get('/cercaordini', [OrdiniController::class, 'cercaordini'])->name('ordini.cercaordini');
+Route::get('/cercacodice', [OrdiniController::class, 'cercacodice'])->name('ordini.cercaCodici');
+Route::get('/ordiniPerCliente', [OrdiniController::class, 'ordiniPerCliente'])->name('ordini.ordiniPerCliente');
 Route::get('/cercaAltezza', [OrdiniController::class, 'cercaAltezza'])->name('ordini.cercaAltezza');
+Route::get('/cercaAnima', [OrdiniController::class, 'cercaAnima'])->name('ordini.cercaAnima');
+Route::get('/cercaDiametro', [OrdiniController::class, 'cercaDiametro'])->name('ordini.cercaDiametro');
 Route::get('/ordine/{id}', [OrdiniController::class, 'show'])->name('ordini.ordine');
 Route::get('/ricetta/{id}', [RicetteController::class, 'showParam'])->name('ricette.ricetta');
 Route::get('/manutenzioni', [ManutenzioniController::class, 'indexManutenzioni'])->name('manutenzioni');

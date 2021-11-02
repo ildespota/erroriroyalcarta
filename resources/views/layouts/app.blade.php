@@ -53,6 +53,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('creaerrore') }}">{{ __('Aggiungi errore') }} </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('manutenzioni') }}">{{ __('Indice Manutenzioni') }} </a>
                         </li>
